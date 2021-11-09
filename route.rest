@@ -1,0 +1,77 @@
+
+//animal
+GET http://localhost:3000/animals
+
+###
+
+GET http://localhost:3000/animals/618988403ece71ed0ce0610e
+
+###
+
+POST http://localhost:3000/animals
+Content-Type:  application/json
+
+{
+"espece": "t",
+"race": "t",
+"age": "1 an",
+"sexe": "male",
+"taille": "moyen",
+"couleur": "marron",
+"stérilisé": "true"   
+}
+
+###
+
+PATCH http://localhost:3000/animals/61898cdca95142e2acce3c56
+Content-Type:  application/json
+
+{
+"espece": "t",
+"race": "t",
+"age": "1 an",
+"sexe": "male",
+"taille": "moyen",
+"couleur": "marron",
+"stérilisé": "true"   
+}
+
+###
+DELETE http://localhost:3000/animals/61898cdca95142e2acce3c56
+
+###
+//product
+
+GET http://localhost:3000/products
+
+###
+
+GET http://localhost:3000/products/6189a723ecce617b4b4e5016
+
+###
+
+POST http://localhost:3000/products
+Content-Type:  application/json
+
+{
+"nom": "Salami",
+"libelle": "alimentation pour les chats",
+"quantite": "2",
+"prix": "8",
+"categorie": "alimentation"
+}
+
+###
+
+PATCH http://localhost:3000/products/6189a74aecce617b4b4e5019
+Content-Type:  application/json
+
+{
+"nom": "Salami",
+"libelle": "alimentation pour les chats",
+"quantite": "3",
+"prix": "8",
+"categorie": "alimentation"
+}
+###
+DELETE http://localhost:3000/products/618a2d3a13595026c78d88b2
