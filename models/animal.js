@@ -1,6 +1,9 @@
 const mongoose = require('mongoose')
 
 const animalSchema = new mongoose.Schema({
+nom:{
+type:String,
+},
 espece: {
 type:String,
 },
@@ -8,7 +11,7 @@ race: {
     type:String,
 },
 age: {
-    type:String,
+    type:Number,
 },
 sexe: {
     type:String,
@@ -19,7 +22,7 @@ taille: {
 couleur: {
     type:String,
 },
-stérilisé: {
+vacciné: {
     type:Boolean,
 },
 

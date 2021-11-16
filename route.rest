@@ -4,7 +4,7 @@ GET http://localhost:3000/animals
 
 ###
 
-GET http://localhost:3000/animals/618988403ece71ed0ce0610e
+GET http://localhost:3000/animals/618bf0629193b68001202011
 
 ###
 
@@ -12,10 +12,11 @@ POST http://localhost:3000/animals
 Content-Type:  application/json
 
 {
-"espece": "t",
-"race": "t",
-"age": "1 an",
-"sexe": "male",
+"nom":"Nora",
+"espece": "chien",
+"race": "tabby",
+"age": "1",
+"sexe": "female",
 "taille": "moyen",
 "couleur": "marron",
 "stérilisé": "true"   
@@ -23,21 +24,22 @@ Content-Type:  application/json
 
 ###
 
-PATCH http://localhost:3000/animals/61898cdca95142e2acce3c56
+PATCH http://localhost:3000/animals/618bf0629193b68001202011
 Content-Type:  application/json
 
 {
-"espece": "t",
-"race": "t",
-"age": "1 an",
+"nom": "Oscar",
+"espece": "chat",
+"race": "tabby",
+"age": "3",
 "sexe": "male",
 "taille": "moyen",
 "couleur": "marron",
-"stérilisé": "true"   
+"vacciné": "true"   
 }
 
 ###
-DELETE http://localhost:3000/animals/61898cdca95142e2acce3c56
+DELETE http://localhost:3000/animals/618bedb18a4940925ce5c505
 
 ###
 //product
@@ -75,3 +77,139 @@ Content-Type:  application/json
 }
 ###
 DELETE http://localhost:3000/products/618a2d3a13595026c78d88b2
+
+###
+//elevage
+
+GET http://localhost:3000/elevages
+
+###
+
+GET http://localhost:3000/elevages/6191346c2a1f4722f0811588
+
+###
+
+POST http://localhost:3000/elevages
+Content-Type:  application/json
+
+{
+"dateElevage": "2021-11-14",
+"dateApprouve": "2021-11-15",
+"etat":"false"
+}
+
+
+###
+
+PATCH http://localhost:3000/elevages/619134942a1f4722f081158a
+Content-Type:  application/json
+
+{
+"dateElevage": "2021-11-16",
+"dateApprouve": "2021-11-19",
+"etat":"0"
+}
+###
+DELETE http://localhost:3000/elevages/618a2d3a13595026c78d88b2
+
+
+###
+//commande 
+
+GET http://localhost:3000/commandesP
+
+###
+
+GET http://localhost:3000/commandesP/619143241c3cf1f9be0ff743
+
+###
+
+POST http://localhost:3000/commandesP
+Content-Type:  application/json
+
+{
+"dateCommande": "2021-11-20",
+"dateApprouve": "2021-11-22",
+"etat":"false"
+}
+
+
+###
+
+PATCH http://localhost:3000/commandesP/619143241c3cf1f9be0ff743
+Content-Type:  application/json
+
+{
+"dateCommande": "2021-11-22",
+"dateApprouve": "2021-11-23",
+"etat":"true"
+}
+###
+DELETE http://localhost:3000/commandesP/618a2d3a13595026c78d88b2
+
+###
+//user
+GET http://localhost:3000/users
+
+###
+
+GET http://localhost:3000/users/618bf0629193b68001202011
+
+###
+
+POST http://localhost:3000/users
+Content-Type:  application/json
+
+{
+"nom":"sawssen",
+"prenom": "gharbi",
+"pseudo": "sawsaw",
+"email": "saw0gmail.com",
+"role": "admin",
+"mdp": "0000",
+"pdp": "url"
+}
+
+###
+
+PATCH http://localhost:3000/users/619159b825430e967b848c58
+Content-Type:  application/json
+
+{
+"nom":"sawssenn",
+"prenom": "gharbi",
+"pseudo": "saws",
+"email": "saw0gmail.com",
+"role": "admin",
+"mdp": "0000",
+"pdp": "url"
+}
+
+###
+DELETE http://localhost:3000/users/61916c2d82dd1b6feeb51999
+
+
+###
+//panier
+GET http://localhost:3000/paniers
+
+###
+
+GET http://localhost:3000/paniers/618bf0629193b68001202011
+
+
+###
+DELETE http://localhost:3000/paniers/61915fe938fc679049a07f51
+
+
+###
+//favoris
+GET http://localhost:3000/favoris
+
+###
+
+GET http://localhost:3000/favoris/618bf0629193b68001202011
+
+
+###
+DELETE http://localhost:3000/favoris/61915fe938fc679049a07f51

@@ -19,5 +19,19 @@ app.use('/animals',animalsRouter)
 const productsRouter = require("./routes/products")
 app.use('/products',productsRouter)
 
+const elevageRouter = require("./routes/elevages")
+app.use('/elevages',elevageRouter)
+
+const commandeProduitRouter = require("./routes/commandesP")
+app.use('/commandesP',commandeProduitRouter)
+
+const userRouter = require("./routes/users")
+app.use('/users',userRouter)
+
+const panierRouter = require("./routes/paniers")
+app.use('/paniers',panierRouter)
+
+const favorisRouter = require("./routes/favoris")
+app.use('/favoris',favorisRouter)
 
 app.listen(3000, () => console.log('Server Started'));

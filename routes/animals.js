@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const Animal = require('../models/animal')
+const Animal = require('../models/animal');
 
 //getting all 
 router.get('/',async (req,res) =>{
@@ -26,7 +26,7 @@ router.post('/',async (req,res) =>{
         sexe: req.body.sexe,
         taille: req.body.taille,
         couleur: req.body.couleur,
-        stérilisé: req.body.stérilisé,   
+        vacciné: req.body.vacciné,   
     })
     try{
         const newAnimal = await animal.save()
@@ -42,9 +42,12 @@ router.post('/',async (req,res) =>{
 //patch not put because it will update all 
 //informations instead of the info passed on router
 router.patch('/:id',getAnimal,async (req,res) =>{
-  if(req.body.espece !=null){
-      res.animal.espece = req.animal.espece
+  if(req.body.nom!=null){
+    res.animal.nom = req.body.nom
   }
+ if(req.body.espece!=null){
+   res.animal.espece = req.body.espece
+ }
   if(req.body.race!=null){
       res.animal.race = req.body.race
   }
@@ -60,8 +63,8 @@ router.patch('/:id',getAnimal,async (req,res) =>{
   if(req.body.couleur!=null){
     res.animal.couleur = req.body.couleur
 }
-if(req.body.stérilisé!=null){
-  res.animal.stérilisé = req.body.stérilisé
+if(req.body.vacciné!=null){
+  res.animal.vacciné = req.body.vacciné
 }
   try{
   const updatedAnimal = await res.animal.save()
