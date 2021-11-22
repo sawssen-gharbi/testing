@@ -5,7 +5,6 @@ GET http://localhost:3000/animals
 ###
 
 GET http://localhost:3000/animals/618bf0629193b68001202011
-
 ###
 
 POST http://localhost:3000/animals
@@ -24,7 +23,7 @@ Content-Type:  application/json
 
 ###
 
-PATCH http://localhost:3000/animals/618bf0629193b68001202011
+PATCH http://localhost:3000/animals/6193707e6cdde519b134bbf2
 Content-Type:  application/json
 
 {
@@ -39,7 +38,7 @@ Content-Type:  application/json
 }
 
 ###
-DELETE http://localhost:3000/animals/618bedb18a4940925ce5c505
+DELETE http://localhost:3000/animals/6193707e6cdde519b134bbf2
 
 ###
 //product
@@ -161,32 +160,72 @@ POST http://localhost:3000/users
 Content-Type:  application/json
 
 {
-"nom":"sawssen",
-"prenom": "gharbi",
-"pseudo": "sawsaw",
-"email": "saw0gmail.com",
-"role": "admin",
+"nomprenom":"",
+"pseudo": "",
+"adresse":"",
+"localisation":"",
+"email": "oscar@gmail.com",
+"role": "abri",
 "mdp": "0000",
-"pdp": "url"
-}
-
+"pdp": ""
+} 
 ###
-
-PATCH http://localhost:3000/users/619159b825430e967b848c58
+GET http://localhost:3000/users/authentificationAvecToken
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNhd0BnbWFpbC5jb20iLCJpYXQiOjE2Mzc1MTA0NzcsImV4cCI6MTYzNzUxMDQ5Mn0.uJtkBcp4Y4J_8drV7zgMowEq6RoSKHPs31GPgaLmX8w
+###
+POST http://localhost:3000/users/login
 Content-Type:  application/json
 
 {
-"nom":"sawssenn",
-"prenom": "gharbi",
-"pseudo": "saws",
-"email": "saw0gmail.com",
+"nomprenom":"",
+"pseudo": "",
+"adresse":"",
+"localisation":"",
+"email": "saw@gmail.com",
+"role": "admin",
+"mdp": "0000",
+"pdp": ""
+}
+
+###
+
+DELETE http://localhost:3000/users/logout
+Content-Type:  application/json
+{
+    "token": "eyJhbGciOiJIUzI1NiJ9.d2FqZGlAZ21haWwuY29t.yGm-4X-kJ9oQhhVKcq_Gg9ObHe5fZyUuuhzmW90eK08"
+}
+###
+
+POST http://localhost:3000/users
+Content-Type:  application/json
+
+{
+"nomprenom":"",
+"pseudo": "",
+"adresse":"",
+"localisation":"",
+"email": "nora@gmail.com",
+"role": "admin",
+"mdp": "5555",
+"pdp": ""
+}
+###
+PATCH http://localhost:3000/users/61992315de4bdac4b119cf00
+Content-Type:  application/json
+
+{
+"nomprenom":"sawssen",
+"pseudo": "sawsaw",
+"adresse":"ariana",
+"localisation":"messin",
+"email": "saw0@gmail.com",
 "role": "admin",
 "mdp": "0000",
 "pdp": "url"
 }
 
 ###
-DELETE http://localhost:3000/users/61916c2d82dd1b6feeb51999
+DELETE http://localhost:3000/users/61995748b1c375342ac0b6bf
 
 
 ###
